@@ -17,14 +17,14 @@ module.exports = {
             find: '@yomarsanchez/core',
             replacement: path.resolve(
               __dirname,
-              '../../../packages/seek-ui-core/'
+              '../../../packages/seekui-core/'
             ),
           },
           {
             find: '@yomarsanchez/map',
             replacement: path.resolve(
               __dirname,
-              '../../../packages/seek-ui-map/'
+              '../../../packages/seekui-map/'
             ),
           },
         ],

@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "types": ["react", "node"]
+  },
+  "include": ["src/**/*"]
+}

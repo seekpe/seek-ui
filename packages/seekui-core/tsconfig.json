@@ -1,5 +1,5 @@
 {
-  "extends": "ts-config-seek-ui/react-library.json",
+  "extends": "ts-config-seekui/react-library.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }
