@@ -1,5 +1,5 @@
 {
-  "name": "@seek-ui/core",
+  "name": "@yomarsanchez/core",
   "version": "1.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -27,5 +27,10 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yomarsanchez/seekdev-monorepo.git",
+    "directory": "packages/seek-ui-core"
   }
 }

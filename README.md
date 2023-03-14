@@ -45,7 +45,7 @@ Using Turborepo simplifes managing your design system monorepo, as you can have 
 This Turborepo includes the following packages and applications:
 
 - `apps/docs`: Component documentation site with Storybook
-- `packages/@seek-ui/core`: Core React components
+- `packages/@yomarsanchez/core`: Core React components
 - `packages/ts-config-seek-ui`: Shared `tsconfig.json`s used throughout the Turborepo
 - `packages/eslint-preset-acme`: ESLint preset
 
@@ -69,7 +69,7 @@ tsup src/index.tsx --format esm,cjs --dts --external react
 
 ```json:seek-ui-core/package.json
 {
-  "name": "@seek-ui/core",
+  "name": "@yomarsanchez/core",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

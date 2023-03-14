@@ -14,14 +14,14 @@ module.exports = {
       resolve: {
         alias: [
           {
-            find: '@seek-ui/core',
+            find: '@yomarsanchez/core',
             replacement: path.resolve(
               __dirname,
               '../../../packages/seek-ui-core/'
             ),
           },
           {
-            find: '@seek-ui/map',
+            find: '@yomarsanchez/map',
             replacement: path.resolve(
               __dirname,
               '../../../packages/seek-ui-map/'

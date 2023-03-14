@@ -9,8 +9,8 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
-    "@seek-ui/core": "*",
-    "@seek-ui/map": "*",
+    "@yomarsanchez/core": "*",
+    "@yomarsanchez/map": "*",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },

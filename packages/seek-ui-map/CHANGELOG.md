@@ -1,4 +1,4 @@
-# @seek-ui/map
+# @yomarsanchez/map
 
 ## 1.0.0
 
