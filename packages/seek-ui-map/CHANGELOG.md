@@ -1,4 +1,4 @@
-# @seekdev/map
+# @seek-ui/map
 
 ## 1.0.0
 

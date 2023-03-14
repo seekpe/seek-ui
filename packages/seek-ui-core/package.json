@@ -1,6 +1,6 @@
 {
-  "name": "@seekdev/map",
-  "version": "1.0.0",
+  "name": "@seek-ui/core",
+  "version": "1.0.6",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -16,11 +16,11 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "ts-config-seekdev": "*",
+    "ts-config-seek-ui": "*",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.4",
     "eslint": "8.15.0",
-    "eslint-config-seekdev": "*",
+    "eslint-config-seek-ui": "*",
     "react": "18.1.0",
     "tsup": "5.10.1",
     "typescript": "4.5.3"

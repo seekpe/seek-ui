@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ['seekdev'],
+  extends: ['seek-ui'],
 };
