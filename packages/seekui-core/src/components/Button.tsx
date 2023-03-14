@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import { capitalize } from '@yomarsanchez/utils';
 export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset' | undefined;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
@@ -15,7 +15,7 @@ export function Button({ children, ...props }: ButtonProps) {
 
   return (
     <button style={{ padding: '16px' }} {...props}>
-      {children}
+      {capitalize(children)}
     </button>
   );
 }
