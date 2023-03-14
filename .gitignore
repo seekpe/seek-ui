@@ -1,8 +1,17 @@
-# Dependencies
-.psci_modules
-bower_components
+.DS_Store
 node_modules
+.turbo
+*.log
+.next
+dist
+dist-ssr
+*.local
+.env
+.cache
+server/dist
+public/dist
+.turbo
+storybook-static/
 
-# Generated files
-.psci
-output
+apps/app-vite-js
+apps/app-vite-ts
