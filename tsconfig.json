@@ -13,10 +13,6 @@
     "allowSyntheticDefaultImports": true,
     "noErrorTruncation": false,
     "allowJs": true,
-    "paths": {
-      "@seek-ui/utils": ["./packages/seekui-utils/src"],
-      "@seek-ui/utils/*": ["./packages/seekui-utils/src/*"]
-    },
     // Otherwise we get react-native typings which conflict with dom.lib.
     "types": ["node", "react", "react-is/next"]
   },

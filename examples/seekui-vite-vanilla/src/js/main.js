@@ -1,3 +1,5 @@
-import { capitalize } from "../../../../packages/seekui-utils/dist";
+import { Modal } from "../../../../packages/seekui-core/src/Modal";
 
-console.log(capitalize('hugo'))
+const modal = new Modal();
+
+console.log('modal', modal);
