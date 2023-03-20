@@ -1,0 +1,40 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  min-width: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  border-radius: 5px;
+  background: white;
+}
+
+.modal-content {
+  padding: 32px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: .5;
+}
