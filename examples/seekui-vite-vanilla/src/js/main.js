@@ -9,9 +9,7 @@ document.querySelector('#modalBtn').addEventListener('click', () => {
       provider: 'vimeo'
     }
   });
-  modal.open().then(() => {
-    console.log('cerrando.......');
-  })
+  modal.open()
 
 })
 

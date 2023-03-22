@@ -11,6 +11,7 @@
     "vite": "^4.2.0"
   },
   "dependencies": {
+    "@yomarsanchez/core": "^1.0.3",
     "plyr": "^3.7.7"
   }
 }
