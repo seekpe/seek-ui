@@ -40,7 +40,7 @@ class Modal<T extends Event> implements ModalInstance<T> {
   }
 
   private createBackdrop(): HTMLElement {
-    const backdrop = document.createElement("div");
+    const backdrop = document.createElement("div") as HTMLElement;
     backdrop.classList.add("backdrop");
     return backdrop;
   }
