@@ -30,7 +30,7 @@ class Modal<T extends Event> implements ModalInstance<T> {
     this.modal = this.getModalElement(options.modalId);
     this.backdrop = this.createBackdrop();
     this.video = options.video;
-    window.addEventListener("click", this.handleWindowClick);
+    this.backdrop.addEventListener("click", this.handleBackdropClick);
   }
 
   private getModalElement(modalId: string): HTMLElement {
@@ -114,16 +114,12 @@ class Modal<T extends Event> implements ModalInstance<T> {
     this.player[0]?.destroy();
   }
 
-  private handleWindowClick(event: MouseEvent): void {
-    const clickedElement = event.target as HTMLElement;
-
-    if (clickedElement === this.backdrop) {
-      Modal.openModals.forEach((modal) => modal.close());
-    }
+  private handleBackdropClick = (): void => {
+    this.close();
   }
 
   public destroy(): void {
-    window.removeEventListener("click", this.handleWindowClick);
+    this.backdrop.removeEventListener("click", this.handleBackdropClick);
     const index = Modal.openModals.indexOf(this);
     if (index > -1) {
       Modal.openModals.splice(index, 1);
