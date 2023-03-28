@@ -134,7 +134,7 @@ El sitio de documentación de Seek UI se encuentra en [`apps/docs`](apps/docs/).
 
 ## Versionado y Publicación de Paquetes
 
-Este proyecto utiliza [Changesets](https://github.com/changesets/changesets) para gestionar versiones, crear registros de cambios y publicar en github packages.
+Este proyecto utiliza [Changesets](https://github.com/changesets/changesets) para gestionar versiones, crear registros de cambios y publicar en GitHub Packages.
 
 ### Generar el Changelog
 
@@ -151,7 +151,7 @@ Para generar tu registro de cambios, ejecuta `pnpm changeset` localmente:
 
 Cuando creas un nuevo release, [GitHub Action](https://github.com/changesets/action) publicará automáticamente los paquetes en GitHub Packages.
 
-Es necesario que el package.json de cada paquete tenga un nombre de paquete de github packages, ademas ´publishConfig´ y `repository`
+Asegúrese que el package.json de cada paquete tenga un nombre de paquete de GitHub Packages, ademas ´publishConfig´ y `repository`
 
 ```json:seekui-core/package.json
 {
@@ -178,4 +178,33 @@ Para publicar los cambios desde tu máquina local, ejecuta el siguiente comando:
 turbo run build --filter=docs^... && changeset publish
 ```
 
-Turborepo ejecuta el script `build` para todos los paquetes publicables (excluyendo docs) y publica los paquetes en github packages.
+Turborepo ejecuta el script `build` para todos los paquetes publicables (excluyendo docs) y publica los paquetes en GitHub Packages.
+
+## Instalar paquetes
+
+Para instalar un paquete de GitHub Packages en un proyecto de JavaScript o TypeScript, debes agregar el alcance `@seekpe` y el registro `https://npm.pkg.github.com` a tu archivo `.npmrc`:
+
+El archivo `.npmrc` se encuentra en la raíz de tu proyecto. Si no existe, crea uno.
+
+```bash
+@seekpe:registry=https://npm.pkg.github.com
+```
+
+Además, debes agregar un token de acceso a tu archivo `.npmrc`:
+
+```bash
+//npm.pkg.github.com/:_authToken=GITHUB_TOKEN
+@seekpe:registry=https://npm.pkg.github.com
+```
+
+Los paquetes de GitHub Packages están disponible para todos los que forman parte de la organización Seekpe, por lo que no es necesario agregar ningún token de acceso personal. El token de acceso se te proveerá cuando te unes a la organización.
+
+Finalmente, instala el paquete que deseas usar:
+
+```bash
+pnpm add @seekpe/core
+## o con npm
+npm install @seekpe/core
+## o con yarn
+yarn add @seekpe/core
+```
