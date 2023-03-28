@@ -7,6 +7,13 @@
   resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.17.12.tgz"
   integrity sha512-O3GCZghRIx+RAN0NDPhyyhRgwa19MoKlzGonIb5hgTj78krqp9XZbYCvFr9N1eUxg0ZQEpiiZ4QvsOQwBpP+lg==
 
+"@yomarsanchez/core@^1.0.3":
+  version "1.0.3"
+  resolved "https://npm.pkg.github.com/download/@yomarsanchez/core/1.0.3/2c8ec64aef844c5feb9d2bce02f7993871425c75"
+  integrity sha512-MoUdZ5+mjAhibR7YuzBHi3784vqwWE4OjMNks6juXuJsguCiE9WdEoa5Mlt3p2cfkA9P6oc2QxZoKkvBKOvr0w==
+  dependencies:
+    plyr "^3.7.7"
+
 core-js@^3.26.1:
   version "3.29.1"
   resolved "https://registry.npmjs.org/core-js/-/core-js-3.29.1.tgz"
