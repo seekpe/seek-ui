@@ -1,7 +1,7 @@
 <!-- markdownlint-disable-next-line -->
 <p align="center">
   <!-- markdownlint-disable-next-line -->
-  <a href="https://mui.com/" rel="noopener" target="_blank"><img width="260" src="apps/docs/public/static/seek-white-logo.svg" alt="MUI logo"></a>
+  <a href="https://mui.com/" rel="noopener" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./apps/docs/public/static/seek-white-logo.svg"><img alt="Logo Seek" src="./apps/docs/public/static/seek-black-logo.svg" width="320"></picture></a>
 </p>
 
 # Seek UI
@@ -29,8 +29,14 @@ Clona el proyecto seek-ui desde tu terminal o [desde GitHub](https://github.com/
 
 ```bash
 git clone git@github.com:seekpe/seek-ui.git
+
 cd seek-ui
+
+## Instalar dependencias
 yarn install
+
+## Ejecutar Storybook
+yarn dev
 ```
 
 ### Comandos útiles

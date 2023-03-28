@@ -1,7 +1,7 @@
 <!-- markdownlint-disable-next-line -->
 <p align="center">
   <!-- markdownlint-disable-next-line -->
-  <a href="https://mui.com/" rel="noopener" target="_blank"><img width="260" height="auto" src="public/static/seek-white-logo.svg" alt="MUI logo"></a>
+  <a href="https://mui.com/" rel="noopener" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./public/static/seek-white-logo.svg"><img alt="Logo Seek" src="./public/static/seek-black-logo.svg" width="320"></picture></a>
 </p>
 
 # Seek UI - Documentación
