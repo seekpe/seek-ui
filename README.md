@@ -1,76 +1,85 @@
-# Turborepo Design System Starter
+<!-- markdownlint-disable-next-line -->
+<p align="center">
+  <!-- markdownlint-disable-next-line -->
+  <a href="https://mui.com/" rel="noopener" target="_blank"><img width="260" src="apps/docs/public/static/seek-white-logo.svg" alt="MUI logo"></a>
+</p>
 
-This guide explains how to use a React design system starter powered by:
+# Seek UI
 
-- 🏎 [Turborepo](https://turborepo.org) — High-performance build system for Monorepos
-- 🚀 [React](https://reactjs.org/) — JavaScript library for user interfaces
-- 🛠 [Tsup](https://github.com/egoist/tsup) — TypeScript bundler powered by esbuild
-- 📖 [Storybook](https://storybook.js.org/) — UI component environment powered by Vite
+Seek UI contiene bibliotecas de componentes fundamentales de Vanilla JS, React, para crear nuevas features más rápido.
 
-As well as a few others tools preconfigured:
+Este Monorepo contiene los siguientes herramientas:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-- [Changesets](https://github.com/changesets/changesets) for managing versioning and changelogs
-- [GitHub Actions](https://github.com/changesets/action) for fully automated package publishing
+- 🚀 [Turborepo](https://turbo.build/repo) — Turborepo es un sistema de compilación de JavaScript y TypeScript para Monorepos.
+- ⚛️ [React](https://react.dev/) — Librería de JavaScript para construir interfaces de usuario.
+- ⚙️ [Tsup](https://github.com/egoist/tsup) — Tsup es un empaquetador de módulos de TypeScript que utiliza esbuild para una compilación increíblemente rápida.
+- 📚 [Storybook](https://storybook.js.org/) — Para desarrollo de interfaz de usuario con componentes de React, Vue, Angular y más.
 
-## Getting Started
+Además de algunas otras herramientas preconfiguradas:
 
-Clone the design system example locally or [from GitHub](https://github.com/vercel/turborepo/tree/main/examples/design-system):
+- [TypeScript](https://www.typescriptlang.org/) para comprobación estática de tipos.
+- [ESLint](https://eslint.org/) para linting de código.
+- [Prettier](https://prettier.io) para formateo de código.
+- [Changesets](https://github.com/changesets/changesets) para gestionar versiones y registros de cambios.
+- [GitHub Actions](https://github.com/changesets/action) para publicación de paquetes totalmente automatizada.
+
+## Instalación
+
+Clona el proyecto seek-ui desde tu terminal o [desde GitHub](https://github.com/seekpe/seek-ui):
 
 ```bash
-npx degit vercel/turborepo/examples/design-system design-system
-cd design-system
+git clone git@github.com:seekpe/seek-ui.git
+cd seek-ui
 yarn install
-git init . && git add . && git commit -m "Init"
 ```
 
-### Useful Commands
+### Comandos útiles
 
-- `yarn build` - Build all packages including the Storybook site
-- `yarn dev` - Run all packages locally and preview with Storybook
-- `yarn lint` - Lint all packages
-- `yarn changeset` - Generate a changeset
+- `yarn build` - Construir todos los paquetes, incluyendo el sitio Storybook.
+- `yarn dev` - Ejecutar todos los paquetes localmente y previsualizar con Storybook.
+- `yarn lint` - Linting de todos los paquetes.
+- `yarn changeset` - Generar un registro de cambios.
 - `yarn clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
+- `yarn clean` - Eliminar todas las carpetas `node_modules` y `dist` (ejecuta el script `clean` de cada paquete).
 
 ## Turborepo
 
-[Turborepo](https://turborepo.org) is a high-performance build system for JavaScript and TypeScript codebases. It was designed after the workflows used by massive software engineering organizations to ship code at scale. Turborepo abstracts the complex configuration needed for monorepos and provides fast, incremental builds with zero-configuration remote caching.
+[Turborepo](https://turborepo.org) es un sistema de compilación de alto rendimiento para código JavaScript y TypeScript. Fue diseñado siguiendo los flujos de trabajo utilizados por grandes organizaciones de ingeniería de software para enviar código a gran escala. Turborepo abstrae la compleja configuración necesaria para los Monorepos y proporciona construcciones rápidas e incrementales con caché remoto sin configuración.
 
-Using Turborepo simplifes managing your design system monorepo, as you can have a single lint, build, test, and release process for all packages. [Learn more](https://vercel.com/blog/monorepos-are-changing-how-teams-build-software) about how monorepos improve your development workflow.
+Utilizar Turborepo simplifica la gestión de tu Monorepo de sistema de diseño, ya que puedes tener un único proceso de lint, construcción, prueba y lanzamiento para todos los paquetes. [Aprende más](https://vercel.com/blog/monorepos) sobre cómo los Monorepos mejoran tu flujo de trabajo de desarrollo.
 
-## Apps & Packages
+## Aplicaciones y paquetes
 
-This Turborepo includes the following packages and applications:
+Este Monorepo incluye los siguientes paquetes y aplicaciones:
 
-- `apps/docs`: Component documentation site with Storybook
-- `packages/@yomarsanchez/core`: Core React components
-- `packages/ts-config-seek-ui`: Shared `tsconfig.json`s used throughout the Turborepo
-- `packages/eslint-preset-acme`: ESLint preset
+- [`apps/docs`](/apps/docs/): Sitio de documentación de componentes con Storybook.
+- [`packages/@seekpe/core`](/packages/seekui-core/): Componentes de diseño de UI.
+- [`packages/@seekpe/utils`](/packages/seekui-utils/): Utilidades compartidas de JavaScript.
+- [`packages/@seekpe/eslint-config-seek`](/packages/seekui-utils/): ESLint preset compartido.
+- [`packages/ts-config-seek-ui`](/packages/ts-config-seek-ui/): `tsconfig.json`s compartidos utilizados en todo el Monorepo.
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/). Yarn Workspaces enables us to "hoist" dependencies that are shared between packages to the root `package.json`. This means smaller `node_modules` folders and a better local dev experience. To install a dependency for the entire monorepo, use the `-W` workspaces flag with `yarn add`.
+Cada paquete y aplicación es 100% [TypeScript](https://www.typescriptlang.org/). Workspaces nos permite "hoist" las dependencias que son compartidas entre los paquetes al `package.json` raíz. Esto significa carpetas más pequeñas de `node_modules` y una mejor experiencia de desarrollo local. Para instalar una dependencia para todo el monorepo, use la bandera `-W` con `yarn add`.
 
-This example sets up your `.gitignore` to exclude all generated files, other folders like `node_modules` used to store your dependencies.
+Este proyecto incluye `.gitignore` para excluir todos los archivos generados, otras carpetas como `node_modules` que se usan para almacenar tus dependencias.
 
-### Compilation
+### Compilar paquetes
 
-To make the core library code work across all browsers, we need to compile the raw TypeScript and React code to plain JavaScript. We can accomplish this with `tsup`, which uses `esbuild` to greatly improve performance.
+Para hacer que el código de la biblioteca principal funcione en todos los navegadores, necesitamos compilar el TypeScript y el código de React en bruto a JavaScript plano. Podemos lograr esto con `tsup`, que utiliza `esbuild` para mejorar enormemente el rendimiento.
 
-Running `yarn build` from the root of the Turborepo will run the `build` command defined in each package's `package.json` file. Turborepo runs each `build` in parallel and caches & hashes the output to speed up future builds.
+Ejecutar `yarn build` desde la raíz de Turborepo ejecutará el comando `build` definido en el archivo `package.json` de cada paquete. Turborepo ejecuta cada `build` en paralelo y almacena en caché y hash el resultado para acelerar las compilaciones futuras.
 
-For `seekui-core`, the `build` command is the following:
+Para `seekui-core`, el comando build es el siguiente:
 
 ```bash
-tsup src/index.tsx --format esm,cjs --dts --external react
+tsup \"src/**/*.{ts,tsx,js,jsx}\" --format esm,cjs --dts --external react
 ```
 
-`tsup` compiles `src/index.tsx`, which exports all of the components in the design system, into both ES Modules and CommonJS formats as well as their TypeScript types. The `package.json` for `seekui-core` then instructs the consumer to select the correct format:
+`tsup` compila `\"src/**/*.{ts,tsx,js,jsx}\"`, que exporta todos los componentes en el sistema de diseño, en formatos tanto de ES Modules como de CommonJS, así como en sus tipos de TypeScript. El `package.json` de `seekui-core` luego instruye al consumidor que seleccione el formato correcto:
 
 ```json:seekui-core/package.json
 {
-  "name": "@yomarsanchez/core",
-  "version": "0.0.0",
+  "name": "@seekpe/core",
+  "version": "1.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -78,21 +87,21 @@ tsup src/index.tsx --format esm,cjs --dts --external react
 }
 ```
 
-Run `yarn build` to confirm compilation is working correctly. You should see a folder `seekui-core/dist` which contains the compiled output.
+Ejecute `yarn build` para confirmar que la compilación está funcionando correctamente. Debería ver una carpeta `seekui-core/dist` que contiene el resultado compilado.
 
 ```bash
 seekui-core
 └── dist
-    ├── index.d.ts  <-- Types
-    ├── index.js    <-- CommonJS version
-    └── index.mjs   <-- ES Modules version
+    ├── index.d.ts  <-- Tipos
+    ├── index.js    <-- Versión CommonJS
+    └── index.mjs   <-- Versión de ES Modules
 ```
 
-## Components
+## Componentes
 
-Each file inside of `seekui-core/src` is a component inside our design system. For example:
+Cada archivo dentro de `seekui-core/src` es un componente dentro de nuestro sistema de diseño. Por ejemplo:
 
-```tsx:seekui-core/src/Button.tsx
+```tsx:seekui-core/src/components/Button/Button.tsx
 import * as React from 'react';
 
 export interface ButtonProps {
@@ -106,89 +115,61 @@ export function Button(props: ButtonProps) {
 Button.displayName = 'Button';
 ```
 
-When adding a new file, ensure the component is also exported from the entry `index.tsx` file:
+Al agregar un nuevo archivo, asegúrese de que el componente también se exporte desde el archivo de entrada `index.tsx`:
 
-```tsx:seekui-core/src/index.tsx
+```tsx:seekui-core/src/components/Button/index.tsx
 import * as React from "react";
 export { Button, type ButtonProps } from "./Button";
-// Add new component exports here
 ```
 
-## Storybook
+## Documentación
 
-Storybook provides us with an interactive UI playground for our components. This allows us to preview our components in the browser and instantly see changes when developing locally. This example preconfigures Storybook to:
+El sitio de documentación de Seek UI se encuentra en [`apps/docs`](apps/docs/). Storybook es una herramienta de documentación de componentes que permite a los desarrolladores explorar los componentes de su biblioteca, ver ejemplos de uso y editar los componentes en vivo.
 
-- Use Vite to bundle stories instantly (in milliseconds)
-- Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@seekui-core` for imports
-- Write MDX for component documentation pages
+## Versionado y Publicación de Paquetes
 
-For example, here's the included Story for our `Button` component:
+Este proyecto utiliza [Changesets](https://github.com/changesets/changesets) para gestionar versiones, crear registros de cambios y publicar en github packages.
 
-```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@seekui-core/src';
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+### Generar el Changelog
 
-<Meta title="Components/Button" component={Button} />
+Para generar tu registro de cambios, ejecuta `pnpm changeset` localmente:
 
-# Button
+1. **¿Qué paquetes deseas incluir?** – Esto muestra qué paquetes han cambiado y cuáles han permanecido iguales. Por defecto, no se incluyen paquetes. Presiona la tecla `space` para seleccionar los paquetes que deseas incluir en el `changeset`.
+1. **¿Qué paquetes deberían tener un gran incremento de versión?** – Presiona la tecla `space` para seleccionar los paquetes para los que deseas aumentar la versión.
+1. Si estás haciendo la primera versión mayor, confirma que deseas publicar.
+1. Escribe un resumen de los cambios.
+1. Confirma que el changeset se ve como se espera.
+1. Se creará un nuevo archivo Markdown en la carpeta `changeset` con el resumen y una lista de los paquetes incluidos.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
+### Publicar los cambios
 
-## Props
+Cuando creas un nuevo release, [GitHub Action](https://github.com/changesets/action) publicará automáticamente los paquetes en GitHub Packages.
 
-<Props of={Box} />
+Es necesario que el package.json de cada paquete tenga un nombre de paquete de github packages, ademas ´publishConfig´ y `repository`
 
-## Examples
-
-<Preview>
-  <Story name="Default">
-    <Button>Hello</Button>
-  </Story>
-</Preview>
+```json:seekui-core/package.json
+{
+  "name": "@seekpe/core",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seekpe/seek-ui.git",
+    "directory": "packages/seekui-core"
+  },
+}
 ```
 
-This example includes a few helpful Storybook scripts:
-
-- `yarn dev`: Starts Storybook in dev mode with hot reloading at `localhost:6006`
-- `yarn build`: Builds the Storybook UI and generates the static HTML files
-- `yarn preview-storybook`: Starts a local server to view the generated Storybook UI
-
-## Versioning & Publishing Packages
-
-This example uses [Changesets](https://github.com/changesets/changesets) to manage versions, create changelogs, and publish to npm. It's preconfigured so you can start publishing packages immediatley.
-
-You'll need to create an `NPM_TOKEN` and `GITHUB_TOKEN` and add it to your GitHub repository settings to enable access to npm. It's also worth installing the [Changesets bot](https://github.com/apps/changeset-bot) on your repository.
-
-### Generating the Changelog
-
-To generate your changelog, run `yarn changeset` locally:
-
-1. **Which packages would you like to include?** – This shows which packages and changed and which have remained the same. By default, no packages are included. Press `space` to select the packages you want to include in the `changeset`.
-1. **Which packages should have a major bump?** – Press `space` to select the packages you want to bump versions for.
-1. If doing the first major version, confirm you want to release.
-1. Write a summary for the changes.
-1. Confirm the changeset looks as expected.
-1. A new Markdown file will be created in the `changeset` folder with the summary and a list of the packages included.
-
-### Releasing
-
-When you push your code to GitHub, the [GitHub Action](https://github.com/changesets/action) will run the `release` script defined in the root `package.json`:
+Para publicar los cambios desde tu máquina local, ejecuta el siguiente comando:
 
 ```bash
 turbo run build --filter=docs^... && changeset publish
 ```
 
-Turborepo runs the `build` script for all publishable packages (excluding docs) and publishes the packages to npm. By default, this example includes `acme` as the npm organization. To change this, do the following:
-
-- Rename folders in `packages/*` to replace `acme` with your desired scope
-- Search and replace `acme` with your desired scope
-- Re-run `yarn install`
-
-To publish packages to a private npm organization scope, **remove** the following from each of the `package.json`'s
-
-```diff
-- "publishConfig": {
--  "access": "public"
-- },
-```
+Turborepo ejecuta el script `build` para todos los paquetes publicables (excluyendo docs) y publica los paquetes en github packages.
