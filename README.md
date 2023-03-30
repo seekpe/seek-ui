@@ -45,7 +45,6 @@ yarn dev
 - `yarn dev` - Ejecutar todos los paquetes localmente y previsualizar con Storybook.
 - `yarn lint` - Linting de todos los paquetes.
 - `yarn changeset` - Generar un registro de cambios.
-- `yarn clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
 - `yarn clean` - Eliminar todas las carpetas `node_modules` y `dist` (ejecuta el script `clean` de cada paquete).
 
 ## Turborepo
@@ -202,9 +201,8 @@ Los paquetes de GitHub Packages están disponible para todos los que forman part
 Finalmente, instala el paquete que deseas usar:
 
 ```bash
-pnpm add @seekpe/core
-## o con npm
-npm install @seekpe/core
+npm install @seekpe/package-name
+
 ## o con yarn
-yarn add @seekpe/core
+yarn add @seekpe/package-name
 ```
