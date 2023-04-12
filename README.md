@@ -6,9 +6,9 @@
 
 # Seek UI
 
-Seek UI contiene bibliotecas de componentes fundamentales de Vanilla JS, React, para crear nuevas features más rápido.
+Seek UI contiene bibliotecas de componentes fundamentales de Vanilla JS y React para crear nuevos features más rápido.
 
-Este Monorepo contiene los siguientes herramientas:
+Este Monorepo está configurado con las siguientes herramientas:
 
 - 🚀 [Turborepo](https://turbo.build/repo) — Turborepo es un sistema de compilación de JavaScript y TypeScript para Monorepos.
 - ⚛️ [React](https://react.dev/) — Librería de JavaScript para construir interfaces de usuario.

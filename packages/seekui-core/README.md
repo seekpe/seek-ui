@@ -28,7 +28,7 @@ Todos los componentes de la biblioteca se encuentran en la carpeta `src` y se di
 ```bash
 seekui-core
 └── src
-    ├── Modal
+    ├── Modal        <-- Carpeta del componente Modal
       ├── index.ts   <-- Exporta el componente
       └── Modal.ts   <-- Contiene el componente
     ├── index.d.ts   <-- Tipos Genericos
